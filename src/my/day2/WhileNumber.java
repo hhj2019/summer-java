@@ -13,7 +13,7 @@ public class WhileNumber {
 		int count = 1;
 		
 		while(true) { 
-			System.out.print("0과 100사이의 숫자를 입력하세요\n");
+					System.out.print("0과 100사이의 숫자를 입력하세요\n");
 			int a= sc.nextInt();
 			if(a >=0 && a <=100) {
 				if(a == num) {
