@@ -3,8 +3,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Number {
+	private static Scanner sc;
+
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		
 		Random rand = new Random();
 		int num = rand.nextInt(100);
