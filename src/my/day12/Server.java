@@ -34,6 +34,7 @@ public class Server
 				System.out.println("연결 성공");
 				mr = new MultiServerRunnable(socket);
 				arrlist.add(mr);
+				
 				Thread thread = new Thread(mr);
 				thread.start();
 			}
@@ -60,7 +61,7 @@ public class Server
 		{
 			this.sock = sock;
 		}
-		// arraylist에 있는 객체들에게 동시에 메세지 출력하는 메소드
+		// arraylist에 있는 객체들에게 동시에 메세지 출력하는 메소드 객체들의 크기를 정확이 측정하기 어려울때 사용한다.
 		public void broadCasting(String msg) throws IOException 
 		{
 			for (MultiServerRunnable mr : arrlist) 
@@ -79,7 +80,7 @@ public class Server
 			dos.flush();
 		}
 		@Override
-		public synchronized void run() 
+		public void run() 
 		{
 			boolean isStop=false;
 			try 
